@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "cypress:open": "npx cypress open --env allure=true --config specPattern=cypress/features/** --browser chrome",
+    "cypress:newconfig": "npx cypress run --config-file new.config.js",
+    "report:generate": "npx allure generate allure-results --clean -o allure-report",
+    "report:open": "npx allure open",
+    "report:clean": "npx allure generate --clean"
+  },
+  "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@shelex/cypress-allure-plugin": "^2.32.1",
+    "cypress": "^10.9.0",
+    "cypress-if": "^1.10.1",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.15.10"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "types": [
+      "@shelex/cypress-allure-plugin"
+    ],
+    "noEmit": true
+  }
+}
