@@ -31,14 +31,14 @@ jobs:
                   npx cypress cache list
             - name: Run Cypress
               continue-on-error: true
-              run: npx cypress run --config specPattern=cypress/features/* --env allure=true --browser chrome"
+              run: npx cypress run --config specPattern=cypress/features/* --env allure=true --browser chrome
               env:
                   CYPRESS_SPLIT_SPEC_API_KEY: '${{ secrets.SPLIT_SPEC_API_KEY }}'
 
             - name: Run Cypress Cucumber
               continue-on-error: true
               if: always()
-              run: npx cypress run --config specPattern=cypress/features/*.feature,excludeSpecPattern=*.js --env allure=true --browser chrome"
+              run: npx cypress run --config specPattern=cypress/features/*.feature,excludeSpecPattern=*.js --env allure=true --browser chrome
 
             - name: Get Allure history
               uses: actions/checkout@v2
