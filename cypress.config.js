@@ -9,6 +9,7 @@ const createEsbuildPlugin =
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://telnyx.com/',
+    defaultCommandTimeout: 10000,
     chromeWebSecurity: false,
     specPattern: 'cypress/**/*.feature',
     async setupNodeEvents(on, config) {

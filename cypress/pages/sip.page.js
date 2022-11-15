@@ -7,7 +7,7 @@ class SipPage {
         return cy.get('span[class*=sc-3ccaa17d-0]');
     }
     get searchInput() {
-        return cy.get('input[type="search"]');
+        return cy.get('.sc-24b6e351-0');
     }
 
     // Methods
